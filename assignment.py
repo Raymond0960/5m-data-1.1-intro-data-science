@@ -6,6 +6,9 @@
 
 
 def fizz_buzz(number):
+    if not isinstance(number, int):
+        return "Please enter only a integer"
+    
     """Returns Fizz if number is divisible by 3, Buzz if divisible by 5, FizzBuzz if divisible by both 3 and 5.
     If not divisible by either 3 or 5, returns the number itself.
     >>> fizz_buzz(3)
@@ -15,7 +18,14 @@ def fizz_buzz(number):
     >>> fizz_buzz(15)
     'FizzBuzz'
     """
-    return
+    if number % 3 == 0 and number % 5 == 0:
+        return "FizzBuzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 == 0:
+        return "Buzz"
+    else:
+        return number
 
 
 # Question 2
@@ -24,13 +34,18 @@ def fizz_buzz(number):
 
 
 def sum_of_squares(numbers):
+    if not isinstance(numbers, list):
+        return "Please enter only a list"
     """Returns the sum of the squares of all the numbers in a list.
     >>> sum_of_squares([1, 2, 3])
     14
     >>> sum_of_squares([2, 4, 6])
     56
     """
-    return
+    sum_of_squares = 0
+    for number in numbers:
+        sum_of_squares += number ** 2
+        return sum_of_squares
 
 
 # Question 3
@@ -45,8 +60,15 @@ def count_vowels(string):
     >>> count_vowels("aeiou")
     5
     """
-    return
-
+    if not isinstance(string,str):
+        return "Please enter a string"
+    else:
+    total = 0
+    for i in string:
+        if i in "aeiouAEIOU":
+            total += 1
+            #print(i) # This print is here to show which characters are vowels
+        return total
 
 # Question 4
 
@@ -60,7 +82,14 @@ def count_repeats(string):
     >>> count_repeats("aeiou")
     0
     """
-    return
+    if not isinstance(string,str):
+        return "Please enter a string"
+    else:
+        total = 0
+        for i in string:
+            if string.count(i) > 1:
+            total += 1
+            return total
 
 
 if __name__ == "__main__":
