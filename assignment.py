@@ -63,11 +63,11 @@ def count_vowels(string):
     if not isinstance(string,str):
         return "Please enter a string"
     else:
-    total = 0
-    for i in string:
-        if i in "aeiouAEIOU":
-            total += 1
-            #print(i) # This print is here to show which characters are vowels
+        total = 0
+        for i in string:
+            if i in "aeiouAEIOU":
+                total += 1
+                #print(i) # This print is here to show which characters are vowels
         return total
 
 # Question 4
@@ -88,8 +88,8 @@ def count_repeats(string):
         total = 0
         for i in string:
             if string.count(i) > 1:
-            total += 1
-            return total
+                total += 1
+        return total
 
 
 if __name__ == "__main__":
